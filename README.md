@@ -74,7 +74,7 @@
 
 `hardware.txt:<3>[  803.586768][ T7049] nvme nvme4: Connect command failed: host path error`
 
-#### судя по всему NVME диски подключены через внешнее устройство накопитель
+#### судя по всему NVME диски подключены через внешнее устройство накопитель и проблема в драйвере контроллера 
 
 #==[ Configuration File ]===========================#
 
@@ -111,7 +111,7 @@ module=lpfc               license=GPL v2            supported=external
 [Sun Mar  5 17:32:40 2023] dcdbas: externally supported module, setting X kernel taint flag.
 
 
-#### проблема в драйвере внешнего накопителя
+####  драйвер контроллера внешнего накопителя
 
 `SIGNATURE`         `VENDOR`                               `PACKAGE`
 
