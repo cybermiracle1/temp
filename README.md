@@ -83,12 +83,17 @@
 
 
 Kernel Status -- Tainted:            IOE  X   
+
   TAINT: (I) Working around severe firmware bug
+  
   TAINT: (O) Out-of-tree module has been loaded
+  
   TAINT: (E) Unsigned module has been loaded
+  
   TAINT: (X) Modules with external support loaded
 
-module=dcdbas             license=GPL               supported=external       
+module=dcdbas             license=GPL               supported=external      
+
 module=lpfc               license=GPL v2            supported=external       
 
 #==[ Command ]======================================#
