@@ -76,39 +76,39 @@
 
 #### судя по всему NVME диски подключены через внешнее устройство накопитель и проблема в драйвере контроллера 
 
-#==[ Configuration File ]===========================#
+`#==[ Configuration File ]===========================#`
 
-#/proc/sys/kernel/tainted
-79872
+`#/proc/sys/kernel/tainted`
+`79872`
 
 
-Kernel Status -- Tainted:            IOE  X   
+`Kernel Status -- Tainted:            IOE  X   `
 
-  TAINT: (I) Working around severe firmware bug
+  `TAINT: (I) Working around severe firmware bug`
   
-  TAINT: (O) Out-of-tree module has been loaded
+  `TAINT: (O) Out-of-tree module has been loaded`
   
-  TAINT: (E) Unsigned module has been loaded
+  `TAINT: (E) Unsigned module has been loaded`
   
-  TAINT: (X) Modules with external support loaded
+  `TAINT: (X) Modules with external support loaded`
 
-module=dcdbas             license=GPL               supported=external      
+`module=dcdbas             license=GPL               supported=external      `
 
-module=lpfc               license=GPL v2            supported=external       
+`module=lpfc               license=GPL v2            supported=external       `
 
-#==[ Command ]======================================#
+`#==[ Command ]======================================#`
 
-#/bin/dmesg -T | grep taint
+`#/bin/dmesg -T | grep taint`
 
-[Sun Mar  5 17:32:35 2023] lpfc: loading out-of-tree module taints kernel.
+`[Sun Mar  5 17:32:35 2023] lpfc: loading out-of-tree module taints kernel.`
 
-[Sun Mar  5 17:32:35 2023] lpfc: loading out-of-tree module taints kernel.
+`[Sun Mar  5 17:32:35 2023] lpfc: loading out-of-tree module taints kernel.`
 
-[Sun Mar  5 17:32:35 2023] lpfc: module verification failed: signature and/or required key missing - tainting kernel
+`[Sun Mar  5 17:32:35 2023] lpfc: module verification failed: signature and/or required key missing - tainting kernel`
 
-[Sun Mar  5 17:32:35 2023] lpfc: externally supported module, setting X kernel taint flag.
+`[Sun Mar  5 17:32:35 2023] lpfc: externally supported module, setting X kernel taint flag.`
 
-[Sun Mar  5 17:32:40 2023] dcdbas: externally supported module, setting X kernel taint flag.
+`[Sun Mar  5 17:32:40 2023] dcdbas: externally supported module, setting X kernel taint flag.`
 
 
 ####  драйвер контроллера внешнего накопителя
@@ -119,18 +119,18 @@ module=lpfc               license=GPL v2            supported=external
 
 #### драйвер с внешней поддержкой от производителя 
 
-#==[ Command ]======================================#
+`#==[ Command ]======================================#`
 
-#/sbin/modinfo lpfc
+`#/sbin/modinfo lpfc`
 
-filename:       /lib/modules/5.14.21-150400.24.46-default/updates/lpfc.ko
+`filename:       /lib/modules/5.14.21-150400.24.46-default/updates/lpfc.ko`
 
 `supported:      external`
 
-version:        0:14.0.639.23
+`version:        0:14.0.639.23`
 
-author:         Broadcom
+`author:         Broadcom`
 
-description:    Emulex LightPulse Fibre Channel SCSI driver 14.0.639.23
+`description:    Emulex LightPulse Fibre Channel SCSI driver 14.0.639.23`
 
 #### необходимо обратится к производителю внешнего устройства для получения корректного драйвера
